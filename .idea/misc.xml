@@ -3,5 +3,5 @@
   <component name="PreferredVcsStorage">
     <preferredVcsName>ApexVCS</preferredVcsName>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6.3 virtualenv at ~/personal/token_env" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (django-jwt)" project-jdk-type="Python SDK" />
 </project>
