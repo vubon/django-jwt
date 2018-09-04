@@ -1,6 +1,21 @@
-# Discuss about JWT with Django Rest 
+# JWT Deep Dive
 I am not going to dicuss about basic concept of JWT. If need please visit this website 
-https://getblimp.github.io/django-rest-framework-jwt/
+[JWT TOKEN](https://getblimp.github.io/django-rest-framework-jwt/)
+
+## Generate a token 
+```code
+URL: URI/api/v1/api-token-auth/
+Method: POST
+```
+```json
+{
+  "email": "vubon.roy@gmail.com",
+  "password": "xxxxx",
+  "authorize": true
+}
+```
+authorize is a extra field and we will add this field in token . 
+
 
 How to add extra Field into your token ?
 - 
@@ -16,8 +31,6 @@ token_decoder = api_settings.JWT_DECODE_HANDLER
 token_encoded = api_settings.JWT_ENCODE_HANDLER
 
 from users.decorators import check_user
-
-
 
 class ObtainToken(ObtainJSONWebToken):
 
