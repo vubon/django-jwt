@@ -52,6 +52,14 @@ class User(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
+    phone_number = models.CharField(max_length=15, null=True, blank=True)
+    first_name = models.CharField(max_length=100, null=True, blank=True)
+    last_name = models.CharField(max_length=100, null=True, blank=True)
+
+    # Checking field
+    authorize = models.BooleanField(default=True)
+
+    # permission and activation information
     active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)  # a admin user; non super-user
     admin = models.BooleanField(default=False)  # a superuser
